@@ -57,7 +57,7 @@ class StringFormatter {
   /**
   * @return string
   */
-  public function toCamelCase($string1, $string2, $capitalize_first_char = false) {
+  public function toCamelCase($string1, $string2) {
 
       $string1 = str_replace('-', ' ', $string1);
     	$string1 = str_replace('_', ' ', $string1);
