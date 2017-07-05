@@ -85,6 +85,15 @@ class StringFormatter {
       return concat($string2, $string1);
   }
 
+  /**
+  * @return string
+  */
+  public function suffix($string1, $string2, $toCamelCase = false) {
+    if ($toCamelCase) {
+      return toCamelCase($string1, $string2);
+    }
+    return concat($string1, $string2);
+  }
 
 
 }
