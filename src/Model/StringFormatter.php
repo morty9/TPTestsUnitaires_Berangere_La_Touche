@@ -75,6 +75,16 @@ class StringFormatter {
     	return $string1 . $string2;
   }
 
+  /**
+  * @return string
+  */
+  public function prefix($string1, $string2, $toCamelCase = false) {
+      if ($toCamel) {
+        return toCamelCase($string2, $string1);
+      }
+      return concat($string2, $string1);
+  }
+
 
 }
 
