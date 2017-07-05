@@ -69,11 +69,6 @@ class StringFormatter {
     	$string2 = ucwords(strtolower($string2));
     	$string2 = str_replace(' ', '', $string2);
 
-      if ($capitalize_first_char) {
-        $string1[0] = strtoupper($string1[0]);
-        $string2[0] = strtoupper($string1[0]);
-      }
-
     	return $string1 . $string2;
   }
 
@@ -82,9 +77,9 @@ class StringFormatter {
   */
   public function prefix($string1, $string2, $toCamelCase = false) {
       if ($toCamel) {
-        return toCamelCase($string2, $string1);
+        return StringFormatter::toCamelCase($string2, $string1);
       }
-      return concat($string2, $string1);
+      return StringFormatter::concat($string2, $string1);
   }
 
   /**
@@ -92,9 +87,9 @@ class StringFormatter {
   */
   public function suffix($string1, $string2, $toCamelCase = false) {
     if ($toCamelCase) {
-      return toCamelCase($string1, $string2);
+      return StringFormatter::toCamelCase($string1, $string2);
     }
-    return concat($string1, $string2);
+    return StringFormatter::concat($string1, $string2);
   }
 
 
