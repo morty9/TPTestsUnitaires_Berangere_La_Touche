@@ -52,6 +52,28 @@ class StringFormatter {
     return $string1 . $string2;
   }
 
+  /**
+  * @return string
+  */
+  public function toCamelCase($string1, $string2, $capitalize_first_char = false) {
+
+      $string1 = str_replace('-', ' ', $string1);
+    	$string1 = str_replace('_', ' ', $string1);
+    	$string1 = ucwords(strtolower($string1));
+    	$string1 = str_replace(' ', '', $string1);
+
+      $string2 = str_replace('-', ' ', $string2);
+    	$string2 = str_replace('_', ' ', $string2);
+    	$string2 = ucwords(strtolower($string2));
+    	$string2 = str_replace(' ', '', $string2);
+
+      if ($capitalize_first_char) {
+        $string1[0] = strtoupper($string1[0]);
+        $string2[0] = strtoupper($string1[0]);
+      }
+
+    	return $string1 . $string2;
+  }
 
 
 }
