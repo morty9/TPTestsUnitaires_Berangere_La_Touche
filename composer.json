@@ -1,0 +1,25 @@
+{
+    "name": "com.berangerelatouche/stringformatter",
+    "description": "Rédaction d'une librairie php \"String Formatter\" gérant plusieurs actions sur des strings",
+    "type": "library",
+    "require": {
+        "phpunit/phpunit": "5.7.*",
+        "friendsofphp/php-cs-fixer": "^2.3"
+    },
+    "authors": [
+        {
+            "name": "berangere.la.touche",
+            "email": "berangere.lt@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\" : "tests/"
+        }
+    }
+}
